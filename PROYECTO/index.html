@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos para Fiestas</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#registro-contacto">Registro-Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="hero">
+            <img src="IMAGENES/FONDO.jpg" alt="Fondo de Eventos">
+            <h1>¡Bienvenidos a Eventos para Fiestas!</h1>
+            <p>Encuentra las mejores fiestas y eventos cerca de ti</p>
+            <a href="#eventos" class="cta-button">Explorar Eventos</a>
+        </div>
+    </section>
+
+    <section id="eventos">
+        <h2>Próximos Eventos</h2>
+        <div class="event-list">
+            <div class="event-card" onmouseover="mostrarImagen(this)" onmouseout="ocultarImagen(this)">
+                <h3>Noche Mexicana</h3>
+                <p><b>Fecha:</b> 15 de Septiembre</p>
+                <p><b>Ubicación:</b> Santiago Cuaula</p>
+                <img src="IMAGENES/noche-mexicana.jfif" alt="Noche Mexicana" width="300px" height="200px" style="display:none;"><br>
+                <button>Ver Detalles</button>
+            </div>
+            <div class="event-card" onmouseover="mostrarImagen(this)" onmouseout="ocultarImagen(this)">
+                <h3>Día de Muertos</h3>
+                <p><b>Fecha:</b> 2 de noviembre</p>
+                <p><b>Ubicación:</b> Santiago Cuaula</p>
+                <img src="IMAGENES/dia-muertos.jpg" alt="Día de Muertos" width="300px" height="200px" style="display:none;"><br>
+                <button>Ver Detalles</button>
+            </div>
+            <div class="event-card" onmouseover="mostrarImagen(this)" onmouseout="ocultarImagen(this)">
+                <h3>Fiesta de Año Nuevo</h3>
+                <p><b>Fecha:</b> 31 de diciembre</p>
+                <p><b>Ubicación:</b> Santiago Cuaula</p>
+                <img src="IMAGENES/ano-nuevo.jpg" alt="Fiesta de Año Nuevo" width="300px" height="200px" style="display:none;"><br>
+                <button>Ver Detalles</button>
+            </div>
+            <div class="event-card" onmouseover="mostrarImagen(this)" onmouseout="ocultarImagen(this)">
+                <h3>Celebración de la Rosca de Reyes</h3>
+                <p><b>Fecha:</b> 06 de Enero</p>
+                <p><b>Ubicación:</b> Santiago Cuaula</p>
+                <img src="IMAGENES/rosca-reyes.jfif" alt="Rosca de Reyes" width="300px" height="200px" style="display:none;"><br>
+                <button>Ver Detalles</button>
+            </div>
+            <div class="event-card" onmouseover="mostrarImagen(this)" onmouseout="ocultarImagen(this)">
+                <h3>Santo Jubileo</h3>
+                <p><b>Fecha:</b> 08 de Febrero</p>
+                <p><b>Ubicación:</b> Santiago Cuaula</p>
+                <img src="IMAGENES/santo-jubileo.jpg" alt="Santo Jubileo" width="300px" height="200px" style="display:none;"><br>
+                <button>Ver Detalles</button>
+            </div>
+            <div class="event-card" onmouseover="mostrarImagen(this)" onmouseout="ocultarImagen(this)">
+                <h3>Carnaval</h3>
+                <p><b>Fecha:</b> 09 de Marzo</p>
+                <p><b>Ubicación:</b> Santiago Cuaula</p>
+                <img src="IMAGENES/carnaval.jpg" alt="Carnaval" width="300px" height="400px" style="display:none;"><br>
+                <button>Ver Detalles</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="registro-contacto">
+        <h2>Regístrate o Contáctanos</h2>
+        <form id="combined-form">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            
+            <label for="event">Selecciona el Evento:</label>
+            <select id="event" name="event">
+                <option value="año-nuevo">Noche Mexicana</option>
+                <option value="dia-muertos">Dia de Muertos</option>
+                <option value="año-nuevo">Fiesta de Año Nuevo</option>
+                <option value="rosca-reyes">Celebracion de la Rosca de Reyes</option>
+                <option value="santo-jubileo">Santo Jubileo</option>
+                <option value="carnaval">Carnaval</option>
+            </select>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <section id="confirmation-message" style="display: none; padding: 20px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; text-align: center;">
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Eventos para Fiestas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
